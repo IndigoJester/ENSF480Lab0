@@ -4,59 +4,58 @@
 
 using namespace std;
 
-Point::Point(double x, double y)
-{
-    xcoord = x;
-    ycoord = y;
+Point::Point (int x, int y) {
+      xcoord = x;
+      ycoord = y;
 }
 
-double Point::getX()
+int Point::getX()
 {
-    return xcoord;
+  return xcoord;
 }
 
-double Point::getY()
+int Point::getY()
 {
-    return ycoord;
+  return ycoord;
 }
 
-void Point::setX(double newX)
+void Point::setX(int newX)
 {
-    xcoord = newX;
+  xcoord = newX;
 }
 
-void Point::setY(double newY)
+void Point::setY(int newY)
 {
-    ycoord = newY;
+  ycoord = newY;
 }
 
 void Point::display()
 {
-    cout << "X-coordinate: " << xcoord << endl;
-    cout << "Y-coordinate: " << ycoord << endl;
+  cout << "X-coordinate: " << xcoord << endl;
+  cout << "Y-coordinate: " << ycoord << endl;
 }
 
 int Point::counter()
 {
-    return 0;
+  return 0;
 }
 
-static double Point::distance(Point& A, Point& B)
+static double Point::distance(Point A, Point B)
 {
-    double a, b;
-    double dist;
-    a = abs(A.getX() - B.getX());
-    b = abs(A.getY() - B.getY());
-    dist = sqrt(pow(a, 2) + pow(b, 2));
-    return dist;
+  int a, b;
+  double dist;
+  a = abs(A.getX() - B.getX());
+  b = abs(A.getY() - B.getY());
+  dist = sqrt(pow(a, 2) + pow(b, 2));
+  return dist;
 }
 
-double Point::distance(Point& B)
+double Point::distance(Point B)
 {
-    double a, b;
-    double dist;
-    a = abs(this.getX() - B.getX());
-    b = abs(this.getY() - B.getY());
-    dist = sqrt(pow(a, 2) + pow(b, 2));
-    return dist;
+  int a, b;
+  double dist;
+  a = abs(this.getX() - B.getX());
+  b = abs(this.getY() - B.getY());
+  dist = sqrt(pow(a, 2) + pow(b, 2));
+  return dist;
 }
