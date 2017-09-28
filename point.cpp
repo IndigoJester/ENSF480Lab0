@@ -4,28 +4,28 @@
 
 using namespace std;
 
-Point::Point(int x, int y)
+Point::Point(double x, double y)
 {
   xcoord = x;
   ycoord = y;
 }
 
-int Point::getX()
+double Point::getX()
 {
   return xcoord;
 }
 
-int Point::getY()
+double Point::getY()
 {
   return ycoord;
 }
 
-void Point::setX(int newX)
+void Point::setX(double newX)
 {
   xcoord = newX;
 }
 
-void Point::setY(int newY)
+void Point::setY(double newY)
 {
   ycoord = newY;
 }
@@ -41,9 +41,9 @@ int Point::counter()
   return 0;
 }
 
-static double Point::distance(Point A, Point B)
+static double Point::distance(Point& A, Point& B)
 {
-  int a, b;
+  double a, b;
   double dist;
   a = abs(A.getX() - B.getX());
   b = abs(A.getY() - B.getY());
@@ -51,9 +51,9 @@ static double Point::distance(Point A, Point B)
   return dist;
 }
 
-double Point::distance(Point B)
+double Point::distance(Point& B)
 {
-  int a, b;
+  double a, b;
   double dist;
   a = abs(this.getX() - B.getX());
   b = abs(this.getY() - B.getY());
