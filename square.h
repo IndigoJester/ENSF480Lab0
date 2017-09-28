@@ -17,4 +17,6 @@ public:
     void setSquareName(char* name);
     char* getSquareName() const;
     void display() const;
-}
+};
+
+#endif
