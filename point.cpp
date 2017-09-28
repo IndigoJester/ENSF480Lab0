@@ -34,7 +34,7 @@ void Point::display()
 {
   cout << "X-coordinate: " << xcoord << endl;
   cout << "Y-coordinate: " << ycoord << endl;
-}s
+}
 
 int Point::counter()
 {
