@@ -63,13 +63,13 @@ void Shape::display()
 
 double Shape::distance(Shape& other)
 {
-    double d = origin.distance(other);
+    double d = origin.distance(other.getOrigin());
     return d;
 }
 
 static double Shape::distance(Shape& the_shape, Shape& other)
 {
-    double d = origin.distance(the_shape, other);
+    double d = origin.distance(the_shape.getOrigin(), other.getOrigin());
     return d;
 }
 
