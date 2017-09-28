@@ -2,6 +2,8 @@
 #include <cmath>
 #include "point.h"
 
+using namespace std;
+
 Point::Point(int x, int y)
 {
   xcoord = x;
@@ -32,7 +34,7 @@ void Point::display()
 {
   cout << "X-coordinate: " << xcoord << endl;
   cout << "Y-coordinate: " << ycoord << endl;
-}
+}s
 
 int Point::counter()
 {
