@@ -39,7 +39,7 @@ int Point::counter()
   return 0;
 }
 
-double Point::distance(Point A, Point B)
+static double Point::distance(Point A, Point B)
 {
   int a, b;
   double dist;
