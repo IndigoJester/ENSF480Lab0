@@ -34,7 +34,7 @@ Shape& Shape::operator=(const Shape& rhs)
     return *this;
 }
 
-Point Shape::getOrigin()
+Point Shape::getOrigin() const
 {
     return origin;
 }
@@ -44,7 +44,7 @@ void Shape::setOrigin(Point s)
     origin = s;
 }
 
-char* Shape::getName()
+char* Shape::getName() const
 {
     return shapeName;
 }
@@ -54,7 +54,7 @@ void Shape::setName(char* n)
     shapeName = n;
 }
 
-void Shape::display()
+void Shape::display() const
 {
     cout << "Shape Name: " << shapeName << endl;
     cout << "X-coordinate: " << origin.getX() << endl;

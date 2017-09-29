@@ -12,19 +12,19 @@ Square::Square(int x, int y, int sidea, char* squareName)
     this->side_a = sidea;
 }
 
-double Square::area()
+double Square::area() const
 {
     double a = pow(this->side_a, 2);
     return a;
 }
 
-double Square::perimeter()
+double Square::perimeter() const
 {
     double p = this->side_a * 4;
     return p;
 }
 
-Point Square::getOrigin()
+Point Square::getOrigin() const
 {
     Point o = super.getOrigin();
     return o;
@@ -40,7 +40,7 @@ void Square::setSideA(int a)
     this->side_a = a;
 }
 
-int Square::getSideA()
+int Square::getSideA() const
 {
     return side_a;
 }
