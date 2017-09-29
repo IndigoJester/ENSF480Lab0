@@ -5,57 +5,55 @@
 using namespace std;
 
 Point::Point (int x, int y) {
-      xcoord = x;
-      ycoord = y;
+    xcoord = x;
+    ycoord = y;
+    ID = currentID;
+    counter++;
 }
 
-int Point::getX()
-{
-  return xcoord;
+int Point::getX () const {
+    return xcoord;
 }
 
-int Point::getY()
-{
-  return ycoord;
+int Point::getY () const {
+    return ycoord;
 }
 
-void Point::setX(int newX)
-{
-  xcoord = newX;
+int Point::getID () const {
+    return ID;
 }
 
-void Point::setY(int newY)
-{
-  ycoord = newY;
+void Point::setX (int newX) {
+    xcoord = newX;
 }
 
-void Point::display()
-{
-  cout << "X-coordinate: " << xcoord << endl;
-  cout << "Y-coordinate: " << ycoord << endl;
+void Point::setY (int newY) {
+    ycoord = newY;
 }
 
-int Point::counter()
-{
-  return 0;
+void Point::display () const {
+    cout << "X-coordinate: " << xcoord << endl;
+    cout << "Y-coordinate: " << ycoord << endl;
 }
 
-static double Point::distance(Point A, Point B)
-{
-  int a, b;
-  double dist;
-  a = abs(A.getX() - B.getX());
-  b = abs(A.getY() - B.getY());
-  dist = sqrt(pow(a, 2) + pow(b, 2));
-  return dist;
+int Point::counter () const {
+    counter;
 }
 
-double Point::distance(Point B)
-{
-  int a, b;
-  double dist;
-  a = abs(this.getX() - B.getX());
-  b = abs(this.getY() - B.getY());
-  dist = sqrt(pow(a, 2) + pow(b, 2));
-  return dist;
+double Point::distance (Point A, Point B) {
+    int a, b;
+    double dist;
+    a = abs(A.getX() - B.getX());
+    b = abs(A.getY() - B.getY());
+    dist = sqrt(pow(a, 2) + pow(b, 2));
+    return dist;
+}
+
+double Point::distance (Point B) const {
+    int a, b;
+    double dist;
+    a = abs(this->getX() - B.getX());
+    b = abs(this->getY() - B.getY());
+    dist = sqrt(pow(a, 2) + pow(b, 2));
+    return dist;
 }
