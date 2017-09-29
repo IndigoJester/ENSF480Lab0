@@ -26,13 +26,13 @@ double Square::perimeter() const
 
 Point Square::getOrigin() const
 {
-    Point o = super.getOrigin();
+    Point o = Shape::getOrigin();
     return o;
 }
 
 void Square::setOrigin(Point a)
 {
-    super.setOrigin(a);
+    Shape::setOrigin(a);
 }
 
 void Square::setSideA(int a)
@@ -47,19 +47,19 @@ int Square::getSideA() const
 
 char* Square::getSquareName() const
 {
-    return super.getName();
+    return Shape::getName();
 }
 
 void setSquareName(char* name)
 {
-    super.setName(name);
+    Shape::setName(name);
 }
 
 void Square::display() const
 {
     cout << "Square Name: " << this->getSquareName() << endl;
-    cout << "X-coordinate: " << super.getX() << endl;
-    cout << "Y-coordinate: " << super.getY() << endl;
+    cout << "X-coordinate: " << Shape::getX() << endl;
+    cout << "Y-coordinate: " << Shape::getY() << endl;
     cout << "Side A: " << this->side_a << endl;
     cout << "Area: " << this->area() << endl;
     cout << "Perimeter: " << this->perimeter() << endl;

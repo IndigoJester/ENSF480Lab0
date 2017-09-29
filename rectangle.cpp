@@ -7,8 +7,8 @@ Rectangle::Rectangle(int x, int y, int sidea, int sideb, char* rectangleName)
 {
     Point a = Point(x, y);
     Shape(a, rectangleName);
-    this.side_a = sidea;
-    this.side_b = sideb;
+    this->side_a = sidea;
+    this->side_b = sideb;
 }
 
 double Rectangle::area()
@@ -25,51 +25,51 @@ double Rectangle::perimeter()
 
 Point Rectangle::getOrigin()
 {
-    return super.getOrigin();
+    return Shape::getOrigin();
 }
 
 void Rectangle::setOrigin(Point a)
 {
-    super.setOrigin(a);
+    Shape::setOrigin(a);
 }
 
 void Rectangle::setSideA(int a)
 {
-    this.side_a = a;
+    this->side_a = a;
 }
 
 int Rectangle::getSideA()
 {
-    return this.side_a;
+    return this->side_a;
 }
 
 void Rectangle::setSideB(int b)
 {
-    this.side_b = b;
+    this->side_b = b;
 }
 
 int Rectangle::getSideB()
 {
-    return this.side_b;
+    return this->side_b;
 }
 
 void Rectangle::setRectangleName(char* name)
 {
-    Shape.setName(name);        //NOT SURE IF SUPER OR SHAPE OR SHAPE::
+    Shape::setName(name);        //NOT SURE IF SUPER OR SHAPE OR SHAPE::
 }
 
 char* Rectangle::getRectangleName()
 {
-    return Shape.getName();
+    return Shape::getName();
 }
 
 void Rectangle::display()
 {
-    cout << "Rectangle Name: " << this.getRectangleName() << endl;
-    cout << "X-coordinate: " << super.getX() << endl;
-    cout << "Y-coordinate: " << super.getY() << endl;
-    cout << "Side A: " << this.side_a << endl;
-    cout << "Side B: " << this.side_b << endl;
-    cout << "Area: " << this.area() << endl;
-    cout << "Perimeter: " << this.perimeter() << endl;
+    cout << "Rectangle Name: " << this->getRectangleName() << endl;
+    cout << "X-coordinate: " << Shape::getX() << endl;
+    cout << "Y-coordinate: " << Shape::getY() << endl;
+    cout << "Side A: " << this->side_a << endl;
+    cout << "Side B: " << this->side_b << endl;
+    cout << "Area: " << this->area() << endl;
+    cout << "Perimeter: " << this->perimeter() << endl;
 }

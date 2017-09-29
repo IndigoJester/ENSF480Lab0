@@ -69,7 +69,7 @@ double Shape::distance(Shape& other)
 
 static double Shape::distance(Shape& the_shape, Shape& other)
 {
-    double d = origin.distance(the_shape.getOrigin(), other.getOrigin());
+    double d = Point::distance(the_shape.getOrigin(), other.getOrigin());
     return d;
 }
 
