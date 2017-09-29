@@ -6,7 +6,7 @@ class Circle : public Shape
 public:
     int radius;
 public:
-    Square(int x, int y, int radii, char* circleName);
+    Circle(int x, int y, int radii, char* circleName);
     double area() const;
     double perimeter() const;
     Point getOrigin() const;
