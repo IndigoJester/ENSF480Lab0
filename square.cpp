@@ -45,7 +45,7 @@ int Square::getSideA() const
     return side_a;
 }
 
-char* Square::getSquareName()
+char* Square::getSquareName() const
 {
     return super.getName();
 }
@@ -55,7 +55,7 @@ void setSquareName(char* name)
     super.setName(name);
 }
 
-void Square::display()
+void Square::display() const
 {
     cout << "Square Name: " << this->getSquareName() << endl;
     cout << "X-coordinate: " << super.getX() << endl;
