@@ -3,10 +3,10 @@
 
 using namespace std;
 
-Shape::Shape(Point o, char* name)   // MY CONSTRUCTOR, THE OTHER IS MOUSSAVI'S
+Shape::Shape(int x, int y, char* name)   // MY CONSTRUCTOR, THE OTHER IS MOUSSAVI'S
 {
-    this->setOrigin(o);
-    this->setName(name);
+    origin = new Point(x, y);
+    shapeName = name;
 }
 
 Shape::Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1])

@@ -7,7 +7,7 @@ private:
     Point origin;
     char* shapeName;
 public:
-    Shape(Point o, char* name);
+    Shape(int x, int y, char* name);
     ~Shape() {delete [] shapeName;};
     Point getOrigin() const;
     void setOrigin(Point s);
