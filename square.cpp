@@ -1,64 +1,29 @@
 #include <iostream>
 #include <cmath>
-#include "Shape.h"
 
 using namespace std;
 
-Square::Square(int x, int y, int sidea, char* squareName)
-{
-    Shape(x, y, squareName);
-    this->side_a = sidea;
+Square::Square (int x, int y, int z, char* name): Shape(x, y, name) {
+    side_a = z;
 }
 
-double Square::area() const
-{
-    double a = pow(this->side_a, 2);
-    return a;
+int Square::area() const {
+    return side_a * side_a;
 }
 
-double Square::perimeter() const
-{
-    double p = this->side_a * 4;
-    return p;
+int Square::perimeter() const {
+    return side_a * 4;
 }
 
-Point Square::getOrigin() const
-{
-    Point o = Shape::getOrigin();
-    return o;
+void Square::set_side_a(int a) {
+    side_a = a;
 }
 
-void Square::setOrigin(Point a)
-{
-    Shape::setOrigin(a);
-}
-
-void Square::setSideA(int a)
-{
-    this->side_a = a;
-}
-
-int Square::getSideA() const
-{
-    return side_a;
-}
-
-char* Square::getSquareName() const
-{
-    return Shape::getName();
-}
-
-void setSquareName(char* name)
-{
-    Shape::setName(name);
-}
-
-void Square::display() const
-{
-    cout << "Square Name: " << this->getSquareName() << endl;
-    cout << "X-coordinate: " << Shape::getX() << endl;
-    cout << "Y-coordinate: " << Shape::getY() << endl;
-    cout << "Side A: " << this->side_a << endl;
-    cout << "Area: " << this->area() << endl;
-    cout << "Perimeter: " << this->perimeter() << endl;
+void Square::display() const {
+    cout << "Square Name: " << shapeName << endl;
+    cout << "X-coordinate: " << origin.getX() << endl;
+    cout << "Y-coordinate: " << origin.getY() << endl;
+    cout << "Side a: " << side_a << endl;
+    cout << "Area: " << area() << endl;
+    cout << "Perimeter: " << perimeter() << endl;
 }

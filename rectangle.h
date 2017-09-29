@@ -1,24 +1,25 @@
 #ifndef RECTANGLE_M
 #define RECTANGLE_M
 
-class Rectangle : public Shape
-{
-public:
-    // ADD SIDE_A data member
-    int side_a, side_b;
-public:
-    Rectangle(int x, int y, int sidea, int sideb, char* rectangleName);
-    double area() const;
-    double perimeter() const;
-    Point getOrigin() const;
-    void setOrigin(Point a);
-    void setSideA(int a);
-    int getSideA() const;
-    void setSideB(int b);
-    int getSideB() const;
-    void setRectangleName(char* name);
-    char* getRectangleName() const;
-    void display() const;
-};
+#include "Square.h"
+#include <string.h>
+
+    class Rectangle : public Square {
+        // Private Data Members
+        private:
+            int side_b;
+
+        // Public Data members
+        public:
+            Rectangle(int x, int y, int z, int a, char* name);
+            Rectangle& operator=(const Rectangle& rhs);
+            int area() const;
+            int perimeter() const;
+            void set_side_b(int b);
+            //get and set
+            void display() const;
+        };
+
+#include "Rectangle.cpp"
 
 #endif

@@ -1,16 +1,14 @@
 #include <iostream>
-#include <string.h>
+#include <cmath>
 
 using namespace std;
 
-Shape::Shape (int x, int y, char* name) {
-    origin = new Point(x, y);
-    shapeName[20];
+Shape::Shape (int x, int y, char* name): origin(Point(x, y)), shapeName(new char[20]) {
     strcpy(shapeName, name);
 }
 
-Shape::Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1])
-{
+Shape::Shape (const Shape& source): origin(source.origin), shapeName(new
+char[strlen(source.shapeName)+1]) {
     if(shapeName == NULL){
         cerr << "Memory not available...";
         exit(1);
@@ -18,11 +16,9 @@ Shape::Shape(const Shape& source):origin(source.origin), shapeName(new char[strl
     strcpy(shapeName, source.shapeName);
 }
 
-Shape& Shape::operator=(const Shape& rhs)
-{
-    if(this==&rhs){
+Shape& Shape::operator=(const Shape& rhs) {
+    if(this==&rhs)
         return *this;
-    }
     delete [] shapeName;
     shapeName = new char[strlen(rhs.shapeName)+1];
     if(shapeName == NULL){
@@ -34,47 +30,29 @@ Shape& Shape::operator=(const Shape& rhs)
     return *this;
 }
 
-Point Shape::getOrigin() const
-{
+Point Shape::getOrigin() const {
     return origin;
 }
 
-void Shape::setOrigin(Point s)
-{
-    origin = s;
-}
-
-char* Shape::getName() const
-{
+char* Shape::getName() const {
     return shapeName;
 }
 
-void Shape::setName(char* n)
-{
-    shapeName = n;
-}
-
-void Shape::display() const
-{
+void Shape::display() const{
     cout << "Shape Name: " << shapeName << endl;
     cout << "X-coordinate: " << origin.getX() << endl;
     cout << "Y-coordinate: " << origin.getY() << endl;
 }
 
-double Shape::distance(Shape& other)
-{
-    double d = origin.distance(other.getOrigin());
-    return d;
+double Shape::distance(Shape& other) const {
+    return origin.distance(other.getOrigin());
 }
 
-static double Shape::distance(Shape& the_shape, Shape& other)
-{
-    double d = Point::distance(the_shape.getOrigin(), other.getOrigin());
-    return d;
+double Shape::distance(Shape& the_shape, Shape& other) {
+    return Point::distance(the_shape.getOrigin(), other.getOrigin());
 }
 
-void Shape::move(double dx, double dy)
-{
-    origin.setX(dx);
-    origin.setY(dy);
+void Shape::move (double dx, double dy) {
+    origin.setX(origin.getX() + dx);
+    origin.setY(origin.getY() + dy);
 }

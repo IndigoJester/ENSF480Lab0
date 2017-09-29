@@ -1,6 +1,6 @@
 #include <iostream>
 #include "GraphicsWorld.h"
-#include "Square.h"
+#include "Rectangle.h"
 
 int main(int argc, char * const argv[])
 {
@@ -19,13 +19,13 @@ void GraphicsWorld::run(){
     cout << "\nExpected second version of the distance function also print: 3"; cout << "\nThe distance between m and n is again: " << Point::distance(m, n);
     #endif // end of block to test Point
 
-    #if 0 // Change 0 to 1 to test Square
+    #if 1 // Change 0 to 1 to test Square
     cout << "\n\nTesting Functions in class Square:" <<endl;
     Square s(5, 7, 12, "SQUARE - S");
     s.display();
     #endif // end of block to test Square
 
-    #if 0 // Change 0 to 1 to test Rectangle
+    #if 1 // Change 0 to 1 to test Rectangle
     cout << "\nTesting Functions in class Rectangle:";
     Rectangle a(5, 7, 12, 15, "RECTANGLE A");
     a.display();
