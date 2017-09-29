@@ -17,7 +17,7 @@
             void setX(int newX);
             void setY(int newY);
             void display() const;
-            int counter() const;
+            static int counter() const;
             static double distance(Point A, Point B);
             double distance(Point B) const;
         };

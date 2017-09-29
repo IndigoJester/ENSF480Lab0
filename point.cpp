@@ -40,7 +40,7 @@ void Point::display () const {
 }
 
 int Point::counter () const {
-    counter;
+    return counter;
 }
 
 double Point::distance (Point A, Point B) {
