@@ -7,7 +7,7 @@ public:
     // ADD SIDE_A data member
     int side_a, side_b;
 public:
-    Square(int x, int y, int sidea, int sideb, char* rectangleName);
+    Rectangle(int x, int y, int sidea, int sideb, char* rectangleName);
     double area() const;
     double perimeter() const;
     Point getOrigin() const;
