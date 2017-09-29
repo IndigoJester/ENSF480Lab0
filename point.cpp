@@ -4,14 +4,12 @@
 
 using namespace std;
 
-static int currentID = 1001;
-static int counter = 0;
+int Point::currentID = 1001;
 
 Point::Point (int x, int y) {
     xcoord = x;
     ycoord = y;
-    ID = currentID;
-    counter++;
+    ID = currentID++;
 }
 
 int Point::getX () const {
@@ -39,8 +37,8 @@ void Point::display () const {
     cout << "Y-coordinate: " << ycoord << endl;
 }
 
-int Point::counter () const {
-    return counter;
+int Point::counter (){
+    return currentID - 1001;
 }
 
 double Point::distance (Point A, Point B) {

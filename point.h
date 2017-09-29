@@ -5,6 +5,7 @@
         // Private Data Members
         private:
             int xcoord, ycoord, ID;
+            static int currentID;
 
         // Public Data members
         public:
@@ -15,7 +16,7 @@
             void setX(int newX);
             void setY(int newY);
             void display() const;
-            static int counter() const;
+            static int counter();
             static double distance(Point A, Point B);
             double distance(Point B) const;
         };
