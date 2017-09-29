@@ -57,8 +57,8 @@ void Shape::setName(char* n)
 void Shape::display()
 {
     cout << "Shape Name: " << shapeName << endl;
-    cout << "X-coordinate: " << xcoord << endl;
-    cout << "Y-coordinate: " << ycoord << endl;
+    cout << "X-coordinate: " << origin.getX() << endl;
+    cout << "Y-coordinate: " << origin.getY() << endl;
 }
 
 double Shape::distance(Shape& other)
