@@ -1,7 +1,7 @@
 #ifndef SHAPE_M
 #define SHAPE_M
 
-class Shape : public Point
+class Shape
 {
 private:
     Point origin;
@@ -19,4 +19,5 @@ public:
     void move (double dx, double dy);
 };
 
+#include "Shape.cpp"
 #endif

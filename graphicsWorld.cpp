@@ -1,7 +1,7 @@
 #include <iostream>
-#include "graphicsWorld.h"
-#include "point.cpp"
-#include "square.cpp"
+#include "GraphicsWorld.h"
+#include "Point.h"
+#include "Square.h"
 
 int main(int argc, char * const argv[])
 {

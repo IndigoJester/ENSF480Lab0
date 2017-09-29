@@ -1,12 +1,14 @@
 #include <iostream>
-#include "shape.h"
+#include <string.h>
+#include "Shape.h"
+#include "Point.h"
 
 using namespace std;
 
-Shape::Shape(int x, int y, char* name)   // MY CONSTRUCTOR, THE OTHER IS MOUSSAVI'S
-{
+Shape::Shape (int x, int y, char* name) {
     origin = new Point(x, y);
-    shapeName = name;
+    shapeName[20];
+    strcpy(shapeName, name);
 }
 
 Shape::Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1])

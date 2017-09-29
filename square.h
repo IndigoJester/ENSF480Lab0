@@ -1,6 +1,7 @@
 #ifndef SQUARE_M
 #define SQUARE_M
 
+
 class Square : public Shape
 {
 public:
@@ -19,4 +20,5 @@ public:
     void display() const;
 };
 
+#include "Square.cpp"
 #endif

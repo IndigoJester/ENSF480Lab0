@@ -20,5 +20,6 @@
             static double distance(Point A, Point B);
             double distance(Point B) const;
         };
+#include "Point.cpp"
 
 #endif

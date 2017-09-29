@@ -1,14 +1,12 @@
 #include <iostream>
 #include <cmath>
-#include "shape.cpp"
-#include "square.h"
+#include "Shape.h"
 
 using namespace std;
 
 Square::Square(int x, int y, int sidea, char* squareName)
 {
-    Point a = Point(x, y);
-    Shape(a, squareName);
+    Shape(x, y, squareName);
     this->side_a = sidea;
 }
 
