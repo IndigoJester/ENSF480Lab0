@@ -4,6 +4,9 @@
 
 using namespace std;
 
+currentID = 1001;
+counter = 0;
+
 Point::Point (int x, int y) {
     xcoord = x;
     ycoord = y;
