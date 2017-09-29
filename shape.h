@@ -8,7 +8,7 @@ private:
     char* shapeName;
 public:
     Shape(Point o, char* name);
-    ~Shape() {delete [] shapeName};
+    ~Shape() {delete [] shapeName;};
     Point getOrigin() const;
     void setOrigin(Point s);
     char* getName() const;

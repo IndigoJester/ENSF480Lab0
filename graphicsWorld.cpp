@@ -1,16 +1,23 @@
 #include <iostream>
 #include "graphicsWorld.h"
+#include "point.cpp"
+#include "square.cpp"
+
+int main(int argc, char * const argv[])
+{
+    GraphicsWorld A;
+    A.run();
+    return 0;
+}
 
 void GraphicsWorld::run(){
-    #if 0 // Change 0 to 1 to test Point
+    #if 1 // Change 0 to 1 to test Point
     Point m (6, 8);
     Point n (6,8);
-    n.setx(9);
+    n.setX(9);
     cout << "\nExpected to dispaly the distance between m and n is: 3";
     cout << "\nThe distance between m and n is: " << m.distance(n);
-    cout << "\nExpected second version of the distance function also print: 3"; cout << "\nThe distance
-    between m and n is again: "
-    << Point::distance(m, n);
+    cout << "\nExpected second version of the distance function also print: 3"; cout << "\nThe distance between m and n is again: " << Point::distance(m, n);
     #endif // end of block to test Point
 
     #if 0 // Change 0 to 1 to test Square
