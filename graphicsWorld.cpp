@@ -1,6 +1,5 @@
 #include <iostream>
 #include "GraphicsWorld.h"
-#include "Point.h"
 #include "Square.h"
 
 int main(int argc, char * const argv[])

@@ -1,5 +1,6 @@
 #ifndef SHAPE_M
 #define SHAPE_M
+#include "Point.h"
 
 class Shape
 {

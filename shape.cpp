@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string.h>
-#include "Shape.h"
-#include "Point.h"
 
 using namespace std;
 
