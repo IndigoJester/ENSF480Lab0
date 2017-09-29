@@ -8,8 +8,6 @@
 
         // Public Data members
         public:
-            static int currentID;
-            static int counter;
             Point(int x, int y);
             int getX() const;
             int getY() const;
